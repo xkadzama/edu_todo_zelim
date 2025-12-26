@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список задач</title>
+</head>
+<body>
+{% if tasks %}
+  {% for id, task in tasks.items() %}
+    <h3>{{ task.title }}</h3>
+    <p>{{ task.description }}</p>
+    <br>
+  {% endfor %}
+{% endif %}
+</body>
+</html>
